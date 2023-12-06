@@ -1,0 +1,275 @@
+/* NAGYOBB RÉSZEK */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0pt;
+    padding: 0pt;
+    background-color: #48cae4;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0pt;
+    padding: 20pt 0pt 0pt 0pt;
+}
+
+.egesz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    background-color: white;
+    border-radius: 15px;
+    border: none;
+    padding: 0 10pt 20pt 10pt;
+}
+
+.container, .container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container>*, .container2>* {
+    margin: 1%;
+}
+
+/* CÍMSOROK, CÍMEK */
+
+header {
+    width: 100%;
+}
+
+h1 {
+    margin: 20pt 0 0 0;
+    text-align: center;
+    font-size: 2.75em;
+}
+
+h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 1.75em;
+}
+
+h3 {
+    text-align: center;
+    color: #09c7ec;
+    font-size: 1.35em;
+}
+
+h3.oldalcim {
+    font-size: 1.75em;
+}
+
+h4 {
+    text-align: center;
+    color: #09c7ec;
+    font-size: 1.1em;
+}
+
+.vonal_cim {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+hr {
+    width: 60%;
+    border: 2pt solid black;
+    text-align: center;
+}
+
+/* MENÜSOR */
+
+nav {
+    padding: 0;
+    margin-top: 20pt;
+}
+
+nav ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 15pt;
+}
+
+nav ul li a {
+    padding: 5pt;
+    text-decoration: none;
+    border: 3pt solid #48cae4;
+    border-radius: 10pt;
+    color: black;
+    font-size: 1.15em;
+}
+
+nav ul li a.current {
+    color: black;
+    background-color: #caf0f8;
+    border: 3pt solid #caf0f8;
+}
+
+nav ul li a:hover, nav ul li a:active, a.current:hover, a.current:active {
+    color: white;
+    background-color: #48cae4;
+    border: 3pt solid #48cae4;
+}
+
+/* EGYÉB NAGYOBB ELEMEK */
+
+.leiras, .elerhetoseg, .tanfolyamok, .adatok, .kerdesek {
+    width: 90%;
+    text-align: center;
+    background-color: #caf0f8;
+    border-radius: 15pt;
+    padding: 15pt;
+}
+
+.leiras {
+    text-align: justify;
+}
+
+.elerhetoseg {
+    text-align: left;
+    width: 90%;
+    height: fit-content;
+}
+
+.fotok {
+    margin: auto;
+    width: 70vw;
+    height: 40vw;
+}
+
+.tanfolyam_reszletek {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #caf0f8;
+    margin: 0;
+    padding: 15pt;
+    text-align: justify;
+}
+
+.tanfolyam_szoveg {
+    width: 100%;
+}
+
+.infok {
+    width: 100%;
+}
+
+label {
+    display: block;
+    text-align: center;
+    font-size: 12pt;
+}
+
+.eredmeny {
+    text-align: center;
+}
+
+.eredmeny a, .eredmeny a:hover, .eredmeny a:active, .eredmeny a:visited {
+    text-decoration: none;
+    color: #48cae4;
+    font-weight: bold;
+}
+
+label.error {
+    color: red;
+    font-weight: bold;
+}
+
+.beiras {
+    font-size: 12pt;
+    border-radius: 5pt;
+}
+
+.gomb {
+    color: white;
+    background-color: #48cae4;
+    border: 3pt solid #48cae4;
+    border-radius: 10pt;
+    padding: 5pt;
+    font-size: 1.15em;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer {
+    width: 100%;
+    padding: 0pt;
+    background-color: #48cae4;
+    margin: 20pt 0pt 5pt 0pt;
+    padding: 0pt;
+    text-align: center;
+}
+
+@media all and (min-width: 600px) {
+    .egesz {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .container {
+        flex-direction: row;
+    }
+    .tanfolyam_reszletek {
+        flex-direction: row;
+    }
+    .tanfolyam_szoveg {
+        width: 70%;
+    }
+    .infok {
+        width: 30%;
+        padding-left: 20pt;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .egesz {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav ul {
+        flex-direction: row;
+    }
+    .container {
+        flex-direction: row;
+        align-items: normal;
+    }
+    .leiras, .elerhetoseg, .tanfolyamok, .adatok, .kerdesek {
+        width: 73%;
+    }
+    .elerhetoseg {
+        width: 23%;
+    }
+    .tanfolyam_reszletek {
+        flex-direction: row;
+    }
+    .tanfolyam_szoveg {
+        width: 70%;
+    }
+    .infok {
+        width: 30%;
+        padding-left: 20pt;
+    }
+}
